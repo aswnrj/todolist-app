@@ -1,0 +1,29 @@
+<%- include("partials/header"); %>
+<div class="navbar">
+  Welcome, <%= name %>
+  <button class="btn btn-danger">LOGOUT</button>
+</div>
+
+<div class="heading">To Do List</div>
+
+<div class="input-area">
+  <form action="/" method="post">
+    <input type="text" name="newItem" placeholder="Add an item" />
+    <button type="submit"><i class="fas fa-plus"></i></button>
+  </form>
+</div>
+
+<div class="items-block">
+  <div class="list-item">
+    <input type="checkbox" name="" />
+    <span> Buy Milk </span>
+    <span class="delete-icon"><i class="fas fa-trash"></i></span>
+  </div>
+  <div class="list-item">
+    <input type="checkbox" name="" />
+    <span> Water the plants </span>
+    <span class="delete-icon"><i class="fas fa-trash"></i></span>
+  </div>
+</div>
+
+<%- include("partials/footer"); %>

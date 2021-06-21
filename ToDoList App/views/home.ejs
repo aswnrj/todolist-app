@@ -1,0 +1,52 @@
+<%- include("partials/header"); %>
+
+<div class="navbar">To-Do List App</div>
+
+<div class="register-page">
+
+  <h1>Never miss any chore ever again.</h1>
+  <h1><%= pageKey=="login"?"Sign in and get back to work!":"Enter your details and sign up today!" %> </h1>
+
+  <form class="register" action=<%= "/"+pageKey %>  method="post">
+
+    <input type="text" name="name" id="" placeholder="Full name" />
+    <input type="email" name="email" id="" placeholder="Email" />
+    <input type="password" name="password" id="" placeholder="Password" />
+    <input type=<%= pageKey=="login"?"hidden":"password"%>
+    name="confirm-password" id="" placeholder="Confirm Password" />
+
+    <button class="btn btn-primary" type="submit"><%= pageKey=="login"?"Login":"Register" %></button>
+
+    <!-- Google Button -->
+    <div class="card-body">
+      <a
+        class="btn btn-block btn-social btn-google google-fb"
+        href="/auth/google"
+        role="button"
+      >
+        <i class="fab fa-google"></i>
+        Sign <%= pageKey=="login"?"In":"Up" %>  with Google
+      </a>
+    </div>
+
+    <!-- Facebook Button -->
+    <div class="card-body">
+      <a
+        class="btn btn-block btn-social btn-facebook google-fb"
+        href="/auth/facebook"
+        role="button"
+      >
+        <i class="fab fa-facebook"></i>
+        Sign <%= pageKey=="login"?"In":"Up" %>  with Facebook
+      </a>
+    </div>
+
+
+    <div class="register-text" style=<%= pageKey=="login"?"display:none;":null %> >
+     Already have an account? <a href="#">Login</a>
+    </div>
+
+  </form>
+</div>
+
+<%- include("partials/footer"); %>

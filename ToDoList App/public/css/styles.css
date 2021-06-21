@@ -1,0 +1,162 @@
+body {
+    background: linear-gradient( to bottom right, #022E57, #1E6F5C);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* Top Navbar */
+
+.navbar {
+    background-color: #161616;
+    height: 80px;
+    box-shadow: 0 2px 5px #161616;
+    padding: 20px 40px;
+    font-family: 'Roboto Slab', serif;
+    color: #F8F5F1;
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+.register-page h1 {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Register Form */
+
+.register {
+    margin-top: 100px;
+}
+
+input {
+    border: 1px solid rgba(252, 252, 252, 0.4);
+    background-color: rgba(252, 252, 252, 0.2);
+    max-width: 300px;
+    border-radius: 3px;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+}
+
+.register button {
+    margin: 10px;
+}
+
+::placeholder {
+    color: rgb(211, 206, 206);
+}
+
+.card-body {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.register-text {
+    color: white;
+    margin-bottom: 100px;
+}
+
+.register-text a {
+    color: #63b3b3;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    color: rgb(9, 241, 241);
+    font-weight: 400;
+}
+
+/* Dashboard Heading  */
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #022E57;
+    margin: 75px auto 50px;
+    padding: 10px 20px;
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px ;
+}
+
+
+/* Dashboard items input */
+
+.input-area input {
+    display: inline;
+    margin: auto;
+}
+
+.input-area button {
+    margin-left: 20px;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: #1E6F5C;
+    color: #fff;
+    border: solid 2px #fff;
+    box-shadow: 0 2px 5px #000;
+}
+
+.input-area button:hover {
+    background-color: #02573d;
+}
+
+/* Dashboard list items  */
+
+.items-block {
+    max-width: 350px;
+    margin: 50px auto ;
+    padding: 2px;
+    box-shadow: 0 5px 10px ;
+}
+
+.list-item {
+    text-align: left;
+    background-color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: large;
+    font-weight: 600;
+    height: 50px;
+    padding: 5px;
+    position: relative;
+}
+
+.list-item input {
+    display: inline;
+    margin: 15px 10px auto;
+}
+
+.delete-icon {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    padding: 3px;
+    text-align: center;
+}
+
+.delete-icon:hover {
+    background-color: #C8C2BC;
+}
+
+.footer {
+    background-color: #161616;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 5px;
+}
