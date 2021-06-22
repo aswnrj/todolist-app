@@ -7,13 +7,23 @@
   <h1>Never miss any chore ever again.</h1>
   <h1><%= pageKey=="login"?"Sign in and get back to work!":"Enter your details and sign up today!" %> </h1>
 
-  <form class="register" action=<%= "/"+pageKey %>  method="post">
+  <form class="register" action="<%= "/"+pageKey %>"  method="post">
 
-    <input type="text" name="name" id="" placeholder="Full name" />
-    <input type="email" name="email" id="" placeholder="Email" />
-    <input type="password" name="password" id="" placeholder="Password" />
-    <input type=<%= pageKey=="login"?"hidden":"password"%>
-    name="confirm-password" id="" placeholder="Confirm Password" />
+    <input type="text" name="fullName" id="" placeholder="Full name" value="<%-fullName%>">
+    <input type="email" name="email" id="" placeholder="Email" value="<%=email%>">
+
+    <% var passClass = ""; %>
+    <% if (wrongPassword || notMatch) passClass = "wrong-pass" %>
+    
+    <input type="password" name="password" id="" placeholder="Password" class="<%=passClass%>" />
+    <input type="<%= pageKey=="login"?"hidden":"password"%>"
+    name="confirmPassword" id="" placeholder="Confirm Password" class="<%=passClass%>" />
+    <% if (wrongPassword) { %>
+     <div class="text-white"> Passwords do not match. </div>
+    <% } %>
+    <% if (notMatch) { %>
+      <div class="text-white"> Check your Password </div>
+     <% } %>
 
     <button class="btn btn-primary" type="submit"><%= pageKey=="login"?"Login":"Register" %></button>
 
@@ -43,7 +53,7 @@
 
 
     <div class="register-text" style=<%= pageKey=="login"?"display:none;":null %> >
-     Already have an account? <a href="#">Login</a>
+     Already have an account? <a href="/login">Login</a>
     </div>
 
   </form>

@@ -11,7 +11,7 @@ body {
 
 .navbar {
     background-color: #161616;
-    height: 80px;
+    height: auto;
     box-shadow: 0 2px 5px #161616;
     padding: 20px 40px;
     font-family: 'Roboto Slab', serif;
@@ -57,6 +57,10 @@ input {
     max-width: 300px;
     margin: 0 auto;
     padding: 10px;
+}
+
+.wrong-pass {
+    border: 1px solid red;
 }
 
 .register-text {
@@ -117,9 +121,10 @@ input {
 
 .items-block {
     max-width: 350px;
-    margin: 50px auto ;
+    margin: 50px auto 200px;
     padding: 2px;
     box-shadow: 0 5px 10px ;
+    position: relative;
 }
 
 .list-item {
@@ -130,7 +135,6 @@ input {
     font-weight: 600;
     height: 50px;
     padding: 5px;
-    position: relative;
 }
 
 .list-item input {
@@ -140,12 +144,15 @@ input {
 
 .delete-icon {
     position: absolute;
-    right: 10px;
+    right: 0;
     width: 40px;
     height: 40px;
     border-radius: 100%;
     padding: 3px;
     text-align: center;
+    background-color: #fff;
+    border: none;
+    margin: 30px 0 100px;
 }
 
 .delete-icon:hover {

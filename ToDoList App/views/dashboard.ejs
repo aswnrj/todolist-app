@@ -1,29 +1,30 @@
 <%- include("partials/header"); %>
 <div class="navbar">
-  Welcome, <%= name %>
-  <button class="btn btn-danger">LOGOUT</button>
+  Welcome, <%=name%>
+  <a href="/login"><button class="btn btn-sm btn-danger">LOGOUT</button></a>
 </div>
 
 <div class="heading">To Do List</div>
 
 <div class="input-area">
-  <form action="/" method="post">
+  <form action="/additem" method="post">
     <input type="text" name="newItem" placeholder="Add an item" />
     <button type="submit"><i class="fas fa-plus"></i></button>
   </form>
 </div>
 
 <div class="items-block">
-  <div class="list-item">
-    <input type="checkbox" name="" />
-    <span> Buy Milk </span>
-    <span class="delete-icon"><i class="fas fa-trash"></i></span>
-  </div>
-  <div class="list-item">
-    <input type="checkbox" name="" />
-    <span> Water the plants </span>
-    <span class="delete-icon"><i class="fas fa-trash"></i></span>
-  </div>
+  <form action="/delete" method="post">
+    <% listItems.forEach(item => { %>
+      <div class="list-item">
+        <input type="checkbox" name="item" value="<%=item.name%>">
+        <span><%=item.name%></span>
+      </div>
+        <% }) %>
+        <button type="submit" class="delete-icon"><i class="fas fa-trash"></i></button>
+      </form>
+   
+
 </div>
 
 <%- include("partials/footer"); %>
