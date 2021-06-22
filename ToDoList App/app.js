@@ -17,15 +17,12 @@ const itemSchema = new mongoose.Schema({
   name: String,
 });
 
-const Item = new mongoose.model("Item", itemSchema);
+const Item = mongoose.model("Item", itemSchema);
 
 const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
-  googleId: String,
-  facebookId: String,
-  secret: String,
   items: [itemSchema],
 });
 
@@ -88,6 +85,7 @@ app.post("/register", (req, res) => {
       name: fullName,
       email: email,
       password: password,
+      items: [],
     });
     newUser.save((err) => {
       if (err) console.log(err);

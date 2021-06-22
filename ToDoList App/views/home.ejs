@@ -18,9 +18,11 @@
     <input type="password" name="password" id="" placeholder="Password" class="<%=passClass%>" />
     <input type="<%= pageKey=="login"?"hidden":"password"%>"
     name="confirmPassword" id="" placeholder="Confirm Password" class="<%=passClass%>" />
+
     <% if (wrongPassword) { %>
      <div class="text-white"> Passwords do not match. </div>
     <% } %>
+
     <% if (notMatch) { %>
       <div class="text-white"> Check your Password </div>
      <% } %>
@@ -31,7 +33,7 @@
     <div class="card-body">
       <a
         class="btn btn-block btn-social btn-google google-fb"
-        href="/auth/google"
+        href="#"
         role="button"
       >
         <i class="fab fa-google"></i>
@@ -43,7 +45,7 @@
     <div class="card-body">
       <a
         class="btn btn-block btn-social btn-facebook google-fb"
-        href="/auth/facebook"
+        href="#"
         role="button"
       >
         <i class="fab fa-facebook"></i>
